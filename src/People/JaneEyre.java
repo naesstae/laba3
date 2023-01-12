@@ -10,8 +10,8 @@ public class JaneEyre extends Person {
     public JaneEyre(){
         super("Я ", Gender.FEMALE, Place.REDROOM);
     }
-    public Time time=Time.NOW;
-    public String thought=new String();
+    private Time time=Time.NOW;
+    private String thought=new String();
     @Override
     public void walk(Place place){
         this.statusofbeing=Statusofbeing.GOING;
