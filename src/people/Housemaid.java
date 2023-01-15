@@ -43,11 +43,13 @@ public class Housemaid extends Person {
     }
     public void turningOnTheFire(Fireplace fireplace){
         fireplace.statusOfFireplace= StatusOfFireplace.ON;
+        fireplace.getPlace().silence=Silence.OFF;
+        fireplace.getPlace().temperature=Temperature.HIGH;
 
     }
     public void turningOffTheFire(Fireplace fireplace){
         fireplace.statusOfFireplace= StatusOfFireplace.OFF;
-        fireplace.getPlace().silence=Silence.OFF;
-        fireplace.getPlace().temperature=Temperature.HIGH;
+        fireplace.getPlace().silence=Silence.ON;
+        fireplace.getPlace().temperature=Temperature.LOW;
     }
 }
